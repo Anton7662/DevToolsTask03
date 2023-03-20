@@ -24,6 +24,8 @@ jobs:
     - name: nuGet package
       run: dotnet pack 
       working-directory: PowerCollections
+    - name: nuGet Login
+      run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
     - name: nuGet push
-      run: dotnet nuget push "*.nupkg" --api-key ${{ secrets.GITHUB_TOKEN }} --source https://nuget.pkg.github.com/Anton7662/index.json --skip-duplicate
+      run: dotnet nuget push "*.nupkg" --api-key "${{ secrets.GITHUB_TOKEN }}" --source https://nuget.pkg.github.com/Anton7662/index.json --skip-duplicate
       working-directory: PowerCollections\PowerCollections\bin\Debug\
