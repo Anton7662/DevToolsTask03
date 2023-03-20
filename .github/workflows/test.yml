@@ -21,5 +21,5 @@ jobs:
       run: dotnet pack 
       working-directory: PowerCollections
     - name: nuGet push
-      run: dotnet nuget push "PowerCollections\bin\Debug\*.nupkg" --api-key ${{ secrets.GITHUB_TOKEN }} --source  https://nuget.pkg.github.com/Anton7662/index.json --skip-duplicate
+      run: dotnet nuget push "PowerCollections\bin\Debug\*.nupkg" --api-key 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 --source https://nuget.pkg.github.com/Anton7662/index.json --skip-duplicate
       working-directory: PowerCollections
