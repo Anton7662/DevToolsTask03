@@ -34,7 +34,7 @@ namespace PowerCollections
             items = new T[capacity];
         }
 
-        public void Push(T item)
+        public void Push(T item
         {
             if (count == items.Length)
                 throw new Exception("Stack is full");
