@@ -34,13 +34,13 @@ namespace PowerCollections
             items = new T[capacity];
         }
 
-        public void Push(T item
+        public void Push(T item)
         {
             if (count == items.Length)
                 throw new Exception("Stack is full");
             items[count++] = item;
         }
-        public T Pop(
+        public T Pop()
         {
             if (count == 0)
                 throw new Exception("Stack is empty");
@@ -48,7 +48,7 @@ namespace PowerCollections
             items[count] = default(T);
             return item;
         }
-        public T Top(
+        public T Top()
         {
             if (count == 0)
                 throw new Exception("The top of the stack is empty");
